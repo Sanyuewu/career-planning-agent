@@ -28,8 +28,8 @@ sentence-transformers>=5.0.0   # 本地文本嵌入（all-MiniLM-L6-v2）
 numpy>=2.0.0                   # 向量相似度计算
 
 # ── Agent Framework ────────────────────────────────────────────────────────────
-crewai>=1.12.0
-crewai-tools>=1.12.0
+crewai>=0.100.0
+crewai-tools>=0.100.0
 
 # ── Document Processing ────────────────────────────────────────────────────────
 pdfplumber>=0.11.0             # PDF 文本提取（主）
