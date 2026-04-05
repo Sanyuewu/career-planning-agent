@@ -1,0 +1,39 @@
+{# polish_report_v1.jinja2 - 报告智能润色Prompt #}
+{# 输入变量: action_plan(list), skill_gaps(list) #}
+
+你是一位专业的职业规划文案润色专家。请对以下职业规划报告的行动计划和技能差距建议进行润色，
+使其更加专业、具体、有说服力，同时完整保留原有结构和信息。
+
+## 待润色的行动计划：
+{{ action_plan | tojson(indent=2) }}
+
+## 待润色的技能差距分析：
+{{ skill_gaps | tojson(indent=2) }}
+
+## 润色要求：
+1. 保持 action_plan 每个阶段的 phase/timeline/goals 字段结构完全不变
+2. 使 goals 中每条描述更具体、可操作、可量化（如"完成Vue3官方教程并实现1个Todo项目"优于"学习Vue3"）
+3. 每条 goal 控制在30-60字之间
+4. 保持 skill_gaps 每条的 skill/importance/jd_source 字段不变，只优化 suggestion 字段
+5. suggestion 应包含：学习资源名称 + 具体行动 + 预计时间，如："参考《Java核心技术》第1-5章+在LeetCode完成10道数组题，预计3周"
+6. 使用专业术语，体现成长路径的递进逻辑
+7. 禁止空泛建议，如"多学习相关知识""提升能力"
+
+只输出合法JSON，结构与输入完全相同，不包含任何其他内容：
+{
+  "action_plan": [
+    {
+      "phase": "<保持原值不变>",
+      "timeline": "<保持原值不变>",
+      "goals": ["<润色后的goal1>", "<润色后的goal2>"]
+    }
+  ],
+  "skill_gaps": [
+    {
+      "skill": "<保持原值不变>",
+      "importance": "<保持原值不变>",
+      "suggestion": "<润色后的建议>",
+      "jd_source": "<保持原值不变>"
+    }
+  ]
+}

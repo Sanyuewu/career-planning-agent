@@ -1,0 +1,193 @@
+/* ============================================================
+   全局共享设计规范
+   所有核心页面（上传/画像/匹配/对话/报告/测评）共用此样式
+   ============================================================ */
+
+/* ── 设计令牌 ───────────────────────────────────────────���─── */
+:root {
+  --color-primary:       #667eea;
+  --color-primary-end:   #764ba2;
+  --color-primary-light: #f0f4ff;
+  --color-bg-page:       #f8fafc;
+  --color-bg-card:       #ffffff;
+  --color-border:        #eee;
+  --color-text-main:     #1a1a2e;
+  --color-text-sub:      #666666;
+  --color-text-hint:     #999999;
+  --radius-card:         16px;
+  --radius-btn:          12px;
+  --shadow-card:         0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-btn-hover:    0 4px 20px rgba(102, 126, 234, 0.4);
+  --gradient-primary:    linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* ── 页面通用容器 ───────────────────────────────────────���──── */
+.upload-page,
+.portrait-page,
+.match-page,
+.report-page,
+.assessment-page,
+.chat-page {
+  min-height: 100vh;
+  background: var(--color-bg-page);
+}
+
+/* ── 页面顶部标题栏 ────────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 32px;
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  background: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.header-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-main);
+}
+
+.header-content p {
+  font-size: 14px;
+  color: var(--color-text-sub);
+  margin: 4px 0 0;
+}
+
+/* ── 卡片 ──────────────────────────────────────────────────── */
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+/* ── 主操作按钮 ────────────────────────────────────────────── */
+.primary-btn {
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── 空状态页 ──────────────────────────────────────────────── */
+.empty-state-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.empty-state-page .empty-state-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.empty-state-page h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin: 0 0 12px;
+}
+
+.empty-state-page p {
+  font-size: 15px;
+  color: var(--color-text-sub);
+  margin: 0 0 28px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* ── 区块小标题 ────────────────────────────────────────────── */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+/* ── 进度条 ────────────────────────────────────────────────── */
+.progress-bar {
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* ── 技能标签 ──────────────────────────────────────────────── */
+.skill-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 2px;
+}
+
+/* ── 移动端适配 ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 16px 16px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}

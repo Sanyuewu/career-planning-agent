@@ -1,0 +1,90 @@
+{
+  "_generated": "2026-04-04T11:49:40.084825",
+  "_description": "经验置信度校准：基于benchmark实测F1 + 用户DB反馈，key为置信度桶(high/mid/low)",
+  "buckets": {
+    "high": {
+      "n": 57,
+      "empirical_accuracy": 0.9766,
+      "min_accuracy": 0.0,
+      "source": "benchmark"
+    },
+    "low": {
+      "n": 106,
+      "empirical_accuracy": 1.0,
+      "min_accuracy": 1.0,
+      "source": "benchmark"
+    }
+  },
+  "industry_buckets": {
+    "运营": {
+      "high": {
+        "n": 6,
+        "empirical_accuracy": 0.9444
+      },
+      "low": {
+        "n": 10,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "销售": {
+      "high": {
+        "n": 8,
+        "empirical_accuracy": 1.0
+      },
+      "low": {
+        "n": 15,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "技术": {
+      "high": {
+        "n": 9,
+        "empirical_accuracy": 0.8889
+      },
+      "low": {
+        "n": 16,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "产品": {
+      "high": {
+        "n": 2,
+        "empirical_accuracy": 1.0
+      },
+      "low": {
+        "n": 2,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "其他": {
+      "high": {
+        "n": 26,
+        "empirical_accuracy": 1.0
+      },
+      "low": {
+        "n": 50,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "人力资源": {
+      "high": {
+        "n": 2,
+        "empirical_accuracy": 1.0
+      },
+      "low": {
+        "n": 4,
+        "empirical_accuracy": 1.0
+      }
+    },
+    "行政": {
+      "high": {
+        "n": 4,
+        "empirical_accuracy": 1.0
+      },
+      "low": {
+        "n": 9,
+        "empirical_accuracy": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1377 @@
+[
+  {
+    "id": "kb_001",
+    "job": "前端开发工程师",
+    "keywords": [
+      "前端",
+      "前端开发",
+      "frontend",
+      "Vue",
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "description": "前端开发工程师负责实现用户界面，将设计稿转化为可交互的网页应用。需要熟练掌握HTML/CSS/JavaScript，以及主流框架如Vue3、React。",
+    "core_skills": [
+      "JavaScript",
+      "TypeScript",
+      "Vue3",
+      "React",
+      "HTML5",
+      "CSS3",
+      "Webpack/Vite",
+      "Git"
+    ],
+    "soft_skills": [
+      "沟通协作",
+      "审美能力",
+      "性能优化意识",
+      "用户体验敏感"
+    ],
+    "promotion_path": "初级前端 → 中级前端 → 高级前端 → 前端架构师 → 技术总监",
+    "transfer_options": [
+      "全栈开发",
+      "移动端开发（React Native）",
+      "Node.js后端",
+      "技术产品经理"
+    ],
+    "salary_range": "12-30K/月（应届8-15K）",
+    "market_outlook": "需求稳定，AI辅助编程工具正在改变工作模式，需持续学习框架生态",
+    "entry_advice": "建议从Vue3或React入手，配合TypeScript，至少完成2个有实际功能的项目作为作品集。",
+    "certifications": [
+      "AWS前端开发者认证",
+      "Google UX设计证书"
+    ],
+    "hiring_seasons": [
+      "3-5月金三银四",
+      "9-10月金九银十"
+    ]
+  },
+  {
+    "id": "kb_002",
+    "job": "后端开发工程师",
+    "keywords": [
+      "后端",
+      "后端开发",
+      "backend",
+      "Java",
+      "Python",
+      "Spring",
+      "FastAPI",
+      "服务端"
+    ],
+    "description": "后端开发工程师负责服务器端逻辑、数据库设计和API接口开发，是系统业务逻辑的核心实现者。",
+    "core_skills": [
+      "Java/Python/Go",
+      "Spring Boot/FastAPI",
+      "MySQL/PostgreSQL",
+      "Redis",
+      "消息队列（Kafka/RabbitMQ）",
+      "Docker",
+      "Git"
+    ],
+    "soft_skills": [
+      "逻辑思维",
+      "系统设计能力",
+      "问题定位能力",
+      "文档规范意识"
+    ],
+    "promotion_path": "初级后端 → 中级后端 → 高级后端 → 架构师 → CTO",
+    "transfer_options": [
+      "全栈开发",
+      "DevOps工程师",
+      "数据工程师",
+      "技术经理"
+    ],
+    "salary_range": "15-40K/月（应届10-18K）",
+    "market_outlook": "持续旺盛，微服务、云原生方向需求增长，Java仍是主流但Go增速快",
+    "entry_advice": "Java+Spring Boot是最稳健入门路径，重点掌握SQL和接口设计，做1-2个完整项目（含数据库设计）。",
+    "certifications": [
+      "Oracle Java认证（OCA/OCP）",
+      "阿里云ACA开发者认证"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_003",
+    "job": "数据分析师",
+    "keywords": [
+      "数据分析",
+      "数据分析师",
+      "data analyst",
+      "SQL",
+      "Excel",
+      "BI",
+      "报表",
+      "数据"
+    ],
+    "description": "数据分析师通过收集、处理和分析数据，为业务决策提供数据支撑。需要具备统计学基础和商业敏感度。",
+    "core_skills": [
+      "SQL",
+      "Python（pandas/numpy）",
+      "Excel/VBA",
+      "Tableau/Power BI",
+      "统计学基础",
+      "数据可视化"
+    ],
+    "soft_skills": [
+      "商业敏感度",
+      "逻辑推理",
+      "表达能力",
+      "跨部门协作"
+    ],
+    "promotion_path": "数据分析师 → 高级数据分析师 → 数据分析经理 → 数据总监",
+    "transfer_options": [
+      "数据科学家",
+      "产品经理",
+      "业务BP",
+      "增长运营"
+    ],
+    "salary_range": "10-25K/月（应届7-12K）",
+    "market_outlook": "各行业数字化转型带动需求，但初级岗位竞争激烈，需差异化（行业背景+工具能力）",
+    "entry_advice": "从SQL和Excel打牢基础，学会用Python做自动化报表，争取行业实习经历（金融/电商/互联网）。",
+    "certifications": [
+      "CDA数据分析师认证",
+      "微软Power BI认证",
+      "Tableau Desktop Specialist"
+    ],
+    "hiring_seasons": [
+      "全年招聘，春秋旺季"
+    ]
+  },
+  {
+    "id": "kb_004",
+    "job": "算法工程师",
+    "keywords": [
+      "算法",
+      "算法工程师",
+      "机器学习",
+      "深度学习",
+      "AI",
+      "人工智能",
+      "NLP",
+      "CV",
+      "推荐算法"
+    ],
+    "description": "算法工程师负责设计、开发和优化机器学习/深度学习模型，应用于推荐系统、计算机视觉、自然语言处理等方向。",
+    "core_skills": [
+      "Python",
+      "PyTorch/TensorFlow",
+      "机器学习算法",
+      "深度学习",
+      "数学（线代/概率/微积分）",
+      "大数据处理（Spark）"
+    ],
+    "soft_skills": [
+      "数学建模能力",
+      "实验设计思维",
+      "论文阅读能力",
+      "快速迭代"
+    ],
+    "promotion_path": "算法工程师 → 高级算法工程师 → 算法专家 → AI科学家 → AI总监",
+    "transfer_options": [
+      "数据科学家",
+      "AI产品经理",
+      "研究员（学术界）",
+      "MLOps工程师"
+    ],
+    "salary_range": "25-60K/月（应届15-30K），顶尖大厂更高",
+    "market_outlook": "大模型时代下需求激增，LLM应用方向爆发，需要深度数学基础和持续学习",
+    "entry_advice": "985/211理工背景优势明显，建议参加Kaggle竞赛、发表论文或复现SOTA模型积累作品，数学基础是门槛。",
+    "certifications": [
+      "深度学习专项课程（Coursera/吴恩达）",
+      "谷歌ML专业证书"
+    ],
+    "hiring_seasons": [
+      "3-5月校招/社招旺季",
+      "秋招9-11月最重要"
+    ]
+  },
+  {
+    "id": "kb_005",
+    "job": "产品经理",
+    "keywords": [
+      "产品",
+      "产品经理",
+      "PM",
+      "PRD",
+      "需求分析",
+      "用户研究",
+      "产品规划"
+    ],
+    "description": "产品经理负责定义产品方向、收集需求、撰写PRD，协调研发/设计/运营推动产品从0到1落地。",
+    "core_skills": [
+      "需求分析",
+      "PRD撰写",
+      "用户研究",
+      "数据分析",
+      "项目管理",
+      "原型设计（Axure/Figma）"
+    ],
+    "soft_skills": [
+      "逻辑思维",
+      "同理心",
+      "沟通协调",
+      "结构化表达",
+      "市场敏感度"
+    ],
+    "promotion_path": "助理产品 → 产品经理 → 高级PM → 产品总监 → CPO",
+    "transfer_options": [
+      "增长运营",
+      "商业分析师",
+      "项目经理",
+      "技术产品经理（需有开发背景）"
+    ],
+    "salary_range": "12-35K/月（应届8-15K）",
+    "market_outlook": "互联网行业收缩但AI产品方向兴起，具备技术背景的AI-PM市场需求旺盛",
+    "entry_advice": "非技术背景需强化逻辑和数据分析能力，技术背景则放大技术理解优势做ToB或AI产品。",
+    "certifications": [
+      "NPDP产品经理认证",
+      "PMP项目管理认证"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_006",
+    "job": "UI设计师",
+    "keywords": [
+      "UI",
+      "UI设计",
+      "用户界面",
+      "Figma",
+      "Sketch",
+      "交互设计",
+      "视觉设计"
+    ],
+    "description": "UI设计师负责产品的视觉界面设计，包括色彩、字体、图标、交互流程等，提升用户体验。",
+    "core_skills": [
+      "Figma/Sketch",
+      "Adobe系列（PS/AI/AE）",
+      "交互原型",
+      "设计规范制定",
+      "用户体验原则"
+    ],
+    "soft_skills": [
+      "审美能力",
+      "创造力",
+      "沟通能力",
+      "细节敏感度"
+    ],
+    "promotion_path": "初级UI → UI设计师 → 高级UI → UX Lead → 设计总监",
+    "transfer_options": [
+      "UX研究员",
+      "产品设计师",
+      "品牌设计师",
+      "前端（学习CSS/JS）"
+    ],
+    "salary_range": "8-25K/月（应届6-12K）",
+    "market_outlook": "中高端岗位需结合UX研究能力，AI设计工具（Midjourney/即时AI）正在改变行业",
+    "entry_advice": "作品集质量决定一切，至少3-5个完整项目，每个项目展示设计思考过程而非只有结果图。",
+    "certifications": [
+      "Google UX设计专项证书",
+      "Adobe认证专家"
+    ],
+    "hiring_seasons": [
+      "全年，春秋两季旺季"
+    ]
+  },
+  {
+    "id": "kb_007",
+    "job": "测试工程师",
+    "keywords": [
+      "测试",
+      "QA",
+      "软件测试",
+      "自动化测试",
+      "性能测试",
+      "测试开发"
+    ],
+    "description": "测试工程师负责验证软件质量，包括功能测试、自动化测试、性能测试，保障产品稳定发布。",
+    "core_skills": [
+      "测试方法论",
+      "Selenium/Appium",
+      "Python（自动化脚本）",
+      "JMeter（性能测试）",
+      "SQL",
+      "接口测试（Postman/pytest）"
+    ],
+    "soft_skills": [
+      "严谨细心",
+      "逻辑思维",
+      "沟通能力",
+      "缺陷意识"
+    ],
+    "promotion_path": "测试工程师 → 高级测试 → 测试开发 → 测试架构师 → 质量总监",
+    "transfer_options": [
+      "测试开发工程师",
+      "后端开发（编程能力强者）",
+      "DevOps工程师",
+      "项目经理"
+    ],
+    "salary_range": "8-20K/月（测试开发15-30K）",
+    "market_outlook": "传统功能测试需求缩减，测试开发（SDET）是成长方向，自动化和AI测试能力是核心竞争力",
+    "entry_advice": "掌握Python+Selenium做Web自动化测试，学习接口测试（Postman+pytest），向测试开发方向发展。",
+    "certifications": [
+      "ISTQB软件测试认证",
+      "软件评测师（软考）"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_008",
+    "job": "运维工程师",
+    "keywords": [
+      "运维",
+      "DevOps",
+      "Linux",
+      "Docker",
+      "K8s",
+      "Kubernetes",
+      "CI/CD",
+      "云运维"
+    ],
+    "description": "运维工程师负责服务器、网络和云基础设施的稳定运行，保障业务持续可用。DevOps方向与研发流程深度融合。",
+    "core_skills": [
+      "Linux",
+      "Docker/Kubernetes",
+      "CI/CD（Jenkins/GitLab CI）",
+      "Ansible/Terraform",
+      "监控告警（Prometheus）",
+      "Shell/Python脚本"
+    ],
+    "soft_skills": [
+      "责任心",
+      "紧急事件处理",
+      "文档能力",
+      "技术学习能力"
+    ],
+    "promotion_path": "运维工程师 → 高级运维 → DevOps工程师 → SRE → 架构师",
+    "transfer_options": [
+      "云计算架构师",
+      "安全运维工程师",
+      "后端开发",
+      "技术支持"
+    ],
+    "salary_range": "10-25K/月（SRE/DevOps 20-40K）",
+    "market_outlook": "云原生方向（K8s/微服务）需求旺盛，传统运维向DevOps/SRE转型是趋势",
+    "entry_advice": "Linux基础+Python脚本是必备，再学Docker和K8s，考取云厂商认证（AWS/阿里云）提升竞争力。",
+    "certifications": [
+      "CKA（Kubernetes管理员）",
+      "AWS SysOps管理员认证",
+      "红帽RHCE认证"
+    ],
+    "hiring_seasons": [
+      "全年招聘，秋招大厂较多"
+    ]
+  },
+  {
+    "id": "kb_009",
+    "job": "网络安全工程师",
+    "keywords": [
+      "网络安全",
+      "信息安全",
+      "安全工程师",
+      "渗透测试",
+      "CTF",
+      "漏洞挖掘",
+      "安全运维"
+    ],
+    "description": "网络安全工程师负责系统安全防护、漏洞评估、安全事件响应，保护企业信息资产不受攻击。",
+    "core_skills": [
+      "网络协议",
+      "渗透测试工具（Metasploit/Burp Suite）",
+      "代码审计（Python/Java）",
+      "CTF技能",
+      "等保合规",
+      "SIEM系统"
+    ],
+    "soft_skills": [
+      "安全意识",
+      "持续学习",
+      "分析能力",
+      "保密意识"
+    ],
+    "promotion_path": "安全工程师 → 高级安全工程师 → 安全架构师 → 首席安全官（CISO）",
+    "transfer_options": [
+      "渗透测试工程师",
+      "安全研究员",
+      "合规审计",
+      "政府/军工安全岗位"
+    ],
+    "salary_range": "15-35K/月（高级方向20-50K）",
+    "market_outlook": "国家政策推动信息安全需求持续增长，等保2.0落地带来大量合规需求",
+    "entry_advice": "参加CTF比赛积累实战经验，考取CISSP/CISP等认证，政府和金融行业是稳定需求方向。",
+    "certifications": [
+      "CISSP",
+      "CISP（注册信息安全专业人员）",
+      "CEH"
+    ],
+    "hiring_seasons": [
+      "全年招聘，政府/军工秋招多"
+    ]
+  },
+  {
+    "id": "kb_010",
+    "job": "数据科学家",
+    "keywords": [
+      "数据科学",
+      "数据科学家",
+      "机器学习",
+      "统计分析",
+      "建模",
+      "预测分析"
+    ],
+    "description": "数据科学家综合运用统计学、机器学习和业务理解，从复杂数据中提取洞察，驱动业务决策。",
+    "core_skills": [
+      "Python（scikit-learn/pandas）",
+      "统计学与概率论",
+      "机器学习",
+      "数据可视化",
+      "SQL",
+      "实验设计（A/B测试）"
+    ],
+    "soft_skills": [
+      "科研思维",
+      "业务理解",
+      "讲故事能力",
+      "批判性思维"
+    ],
+    "promotion_path": "初级数据科学家 → 数据科学家 → 高级数据科学家 → 首席数据科学家",
+    "transfer_options": [
+      "算法工程师",
+      "数据分析师（更业务导向）",
+      "ML工程师",
+      "研究员"
+    ],
+    "salary_range": "20-50K/月（应届15-25K）",
+    "market_outlook": "大模型时代下需求分化，偏业务侧的数据科学需求稳定，偏算法侧竞争激烈",
+    "entry_advice": "扎实的统计学和编程基础，通过Kaggle和实际项目建立作品集，推荐硕士学历起步。",
+    "certifications": [
+      "Google数据分析证书",
+      "IBM数据科学专业证书"
+    ],
+    "hiring_seasons": [
+      "春秋两季，校招为主"
+    ]
+  },
+  {
+    "id": "kb_011",
+    "job": "云计算工程师",
+    "keywords": [
+      "云计算",
+      "云工程师",
+      "AWS",
+      "Azure",
+      "阿里云",
+      "腾讯云",
+      "云架构",
+      "Serverless"
+    ],
+    "description": "云计算工程师负责设计、部署和管理云端基础设施，为业务系统提供高可用、可扩展的云服务支撑。",
+    "core_skills": [
+      "AWS/Azure/阿里云服务",
+      "Terraform（基础设施即代码）",
+      "Docker/Kubernetes",
+      "网络（VPC/负载均衡）",
+      "安全配置",
+      "成本优化"
+    ],
+    "soft_skills": [
+      "架构思维",
+      "技术学习速度",
+      "文档能力",
+      "跨团队协作"
+    ],
+    "promotion_path": "云工程师 → 高级云工程师 → 云架构师 → 首席架构师",
+    "transfer_options": [
+      "DevOps工程师",
+      "SRE（站点可靠性工程师）",
+      "数据工程师（云数仓）",
+      "解决方案架构师"
+    ],
+    "salary_range": "15-40K/月（架构师30-60K）",
+    "market_outlook": "企业上云率持续提升，多云/混合云架构需求增长，云厂商认证含金量高",
+    "entry_advice": "选择一个主云平台深入（AWS或阿里云），考取专业认证，再横向扩展多云技能。",
+    "certifications": [
+      "AWS Solutions Architect认证",
+      "阿里云ACA/ACP认证",
+      "CKA认证"
+    ],
+    "hiring_seasons": [
+      "全年，互联网和传统企业均有需求"
+    ]
+  },
+  {
+    "id": "kb_012",
+    "job": "大数据工程师",
+    "keywords": [
+      "大数据",
+      "Hadoop",
+      "Spark",
+      "数据仓库",
+      "ETL",
+      "数据湖",
+      "Flink",
+      "数据工程"
+    ],
+    "description": "大数据工程师负责构建和维护大规模数据处理平台，包括数据采集、清洗、存储和批/流计算。",
+    "core_skills": [
+      "Hadoop生态（HDFS/Hive）",
+      "Spark",
+      "Flink（实时计算）",
+      "Kafka",
+      "数据仓库建模",
+      "Python/Scala/SQL"
+    ],
+    "soft_skills": [
+      "数据思维",
+      "工程严谨性",
+      "性能调优意识",
+      "业务理解"
+    ],
+    "promotion_path": "大数据工程师 → 高级大数据工程师 → 数据架构师 → 数据平台总监",
+    "transfer_options": [
+      "数据分析师",
+      "算法工程师",
+      "云数仓工程师",
+      "数据产品经理"
+    ],
+    "salary_range": "15-35K/月（应届10-18K）",
+    "market_outlook": "数据仓库向实时化演进（Flink需求增），数据湖/湖仓一体成新趋势",
+    "entry_advice": "扎实掌握SQL+Spark，从离线数仓建模入手，再进阶实时计算（Flink），互联网和金融行业机会多。",
+    "certifications": [
+      "Cloudera数据工程认证",
+      "阿里云数据仓库认证"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-11月"
+    ]
+  },
+  {
+    "id": "kb_013",
+    "job": "嵌入式工程师",
+    "keywords": [
+      "嵌入式",
+      "嵌入式开发",
+      "单片机",
+      "RTOS",
+      "驱动开发",
+      "物联网",
+      "IoT",
+      "C语言"
+    ],
+    "description": "嵌入式工程师负责硬件平台上的软件开发，包括驱动程序、实时操作系统和固件，应用于智能硬件和工业设备。",
+    "core_skills": [
+      "C/C++",
+      "RTOS（FreeRTOS/RT-Thread）",
+      "ARM架构",
+      "驱动开发",
+      "通信协议（UART/SPI/I2C/CAN）",
+      "硬件调试"
+    ],
+    "soft_skills": [
+      "工程严谨性",
+      "硬件理解",
+      "耐心细心",
+      "问题定位能力"
+    ],
+    "promotion_path": "嵌入式工程师 → 高级嵌入式工程师 → 系统架构师 → 硬件总监",
+    "transfer_options": [
+      "物联网架构师",
+      "FPGA工程师",
+      "机器人软件工程师",
+      "汽车软件工程师（智能驾驶方向）"
+    ],
+    "salary_range": "10-25K/月（智能驾驶方向15-40K）",
+    "market_outlook": "智能汽车和工业物联网带动需求，AUTOSAR/功能安全方向薪资高",
+    "entry_advice": "扎实C语言基础+操作系统原理，参与实际硬件项目（STM32/树莓派），考取相关认证。",
+    "certifications": [
+      "ARM Cortex-M认证",
+      "功能安全工程师（TÜV）"
+    ],
+    "hiring_seasons": [
+      "全年，新能源汽车方向增长快"
+    ]
+  },
+  {
+    "id": "kb_014",
+    "job": "人工智能工程师",
+    "keywords": [
+      "人工智能",
+      "AI工程师",
+      "大模型",
+      "LLM",
+      "GPT",
+      "Prompt",
+      "智能体",
+      "AIGC"
+    ],
+    "description": "AI工程师负责大型语言模型（LLM）的应用开发、微调部署和智能体构建，推动AI技术落地产业。",
+    "core_skills": [
+      "Python",
+      "Hugging Face生态",
+      "Prompt Engineering",
+      "LangChain/LlamaIndex",
+      "模型微调（LoRA/QLoRA）",
+      "向量数据库（Chroma/Pinecone）"
+    ],
+    "soft_skills": [
+      "技术前沿敏感度",
+      "快速学习",
+      "工程落地能力",
+      "跨学科思维"
+    ],
+    "promotion_path": "AI工程师 → 高级AI工程师 → AI架构师 → AI负责人",
+    "transfer_options": [
+      "算法研究员",
+      "AI产品经理",
+      "LLMOps工程师",
+      "ML平台工程师"
+    ],
+    "salary_range": "25-60K/月（顶尖人才更高）",
+    "market_outlook": "2024-2026年最热门方向，大模型应用爆发增长，RAG/Agent/多模态是热点",
+    "entry_advice": "掌握LangChain/LlamaIndex框架，能独立搭建RAG系统或AI智能体，参与开源项目或发表技术博客增加曝光。",
+    "certifications": [
+      "DeepLearning.AI专项课程",
+      "Hugging Face认证"
+    ],
+    "hiring_seasons": [
+      "全年热招，互联网和AI创业公司为主"
+    ]
+  },
+  {
+    "id": "kb_015",
+    "job": "项目经理",
+    "keywords": [
+      "项目经理",
+      "项目管理",
+      "PMP",
+      "Scrum",
+      "敏捷",
+      "研发管理",
+      "交付管理"
+    ],
+    "description": "项目经理负责软件项目的计划、执行和交付，协调跨职能团队，控制项目范围、时间和质量。",
+    "core_skills": [
+      "项目管理方法论（PMP/Scrum）",
+      "风险管理",
+      "资源调度",
+      "沟通管理",
+      "Jira/Confluence",
+      "需求管理"
+    ],
+    "soft_skills": [
+      "领导力",
+      "沟通协调",
+      "压力管理",
+      "决策能力",
+      "利益相关者管理"
+    ],
+    "promotion_path": "项目经理 → 高级项目经理 → 项目群经理 → 项目管理总监 → PMO负责人",
+    "transfer_options": [
+      "产品经理",
+      "运营总监",
+      "技术总监（有技术背景者）",
+      "咨询顾问"
+    ],
+    "salary_range": "12-30K/月",
+    "market_outlook": "互联网行业PM职位收缩，但传统企业数字化转型带来大量需求，PMP含金量持续",
+    "entry_advice": "技术背景者转型更顺畅，考取PMP认证，积累完整项目交付经验，数字化转型领域机会多。",
+    "certifications": [
+      "PMP认证",
+      "ACP敏捷项目管理认证",
+      "Scrum Master认证"
+    ],
+    "hiring_seasons": [
+      "全年，传统企业年初预算释放后招聘"
+    ]
+  },
+  {
+    "id": "kb_016",
+    "job": "移动端开发工程师",
+    "keywords": [
+      "移动端",
+      "iOS",
+      "Android",
+      "Swift",
+      "Kotlin",
+      "Flutter",
+      "React Native",
+      "小程序"
+    ],
+    "description": "移动端开发工程师负责iOS/Android原生应用或跨平台应用的开发，实现移动端产品功能。",
+    "core_skills": [
+      "Swift（iOS）或Kotlin（Android）",
+      "Flutter/React Native（跨平台）",
+      "移动端架构",
+      "性能优化",
+      "小程序开发"
+    ],
+    "soft_skills": [
+      "用户体验意识",
+      "性能敏感度",
+      "跨平台思维",
+      "持续学习"
+    ],
+    "promotion_path": "初级移动端 → 中级移动端 → 高级移动端 → 移动端架构师 → 技术总监",
+    "transfer_options": [
+      "全栈开发",
+      "Flutter大前端方向",
+      "技术产品经理",
+      "小程序/H5方向"
+    ],
+    "salary_range": "12-30K/月（应届8-15K）",
+    "market_outlook": "原生开发需求趋于平稳，Flutter等跨平台方案崛起，鸿蒙OS开发成新机遇",
+    "entry_advice": "选择一个平台（iOS/Android）深耕，配合Flutter学习跨平台，鸿蒙方向当前竞争少但前景看好。",
+    "certifications": [
+      "苹果开发者认证",
+      "谷歌Associate Android Developer"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_017",
+    "job": "区块链工程师",
+    "keywords": [
+      "区块链",
+      "blockchain",
+      "智能合约",
+      "Solidity",
+      "Web3",
+      "DeFi",
+      "NFT",
+      "以太坊"
+    ],
+    "description": "区块链工程师负责分布式账本系统和智能合约的开发，构建去中心化应用（DApp）。",
+    "core_skills": [
+      "Solidity（以太坊智能合约）",
+      "Web3.js/Ethers.js",
+      "Truffle/Hardhat框架",
+      "Rust（Solana）",
+      "密码学基础",
+      "分布式系统"
+    ],
+    "soft_skills": [
+      "技术热情",
+      "快速学习",
+      "风险意识",
+      "英语阅读能力"
+    ],
+    "promotion_path": "区块链工程师 → 高级区块链工程师 → 区块链架构师",
+    "transfer_options": [
+      "密码学研究员",
+      "金融科技工程师",
+      "Web3创业方向"
+    ],
+    "salary_range": "20-60K/月（市场波动大）",
+    "market_outlook": "市场受加密资产周期影响较大，Web3基础设施和链游方向相对稳定，政府数字货币（CBDC）方向稳健",
+    "entry_advice": "从Solidity入手，参与开源Web3项目，关注Ethereum/Solana生态，英语能力对获取全球机会很重要。",
+    "certifications": [
+      "区块链开发者认证（多个机构）"
+    ],
+    "hiring_seasons": [
+      "全年，牛市期招聘旺盛"
+    ]
+  },
+  {
+    "id": "kb_018",
+    "job": "全栈开发工程师",
+    "keywords": [
+      "全栈",
+      "全栈开发",
+      "全栈工程师",
+      "full stack",
+      "前后端"
+    ],
+    "description": "全栈开发工程师同时具备前端和后端开发能力，能够独立完成从界面到数据库的完整功能开发。",
+    "core_skills": [
+      "JavaScript/TypeScript",
+      "Vue/React",
+      "Node.js或Python/Java后端",
+      "数据库（MySQL/MongoDB）",
+      "Docker",
+      "RESTful API设计"
+    ],
+    "soft_skills": [
+      "系统全局思维",
+      "快速切换上下文",
+      "自驱力",
+      "技术广度意识"
+    ],
+    "promotion_path": "全栈工程师 → 高级全栈 → 技术负责人 → CTO（小公司）",
+    "transfer_options": [
+      "前端专精",
+      "后端专精",
+      "架构师",
+      "独立开发者"
+    ],
+    "salary_range": "15-40K/月（应届10-18K）",
+    "market_outlook": "初创公司和小团队需求旺盛，大厂偏向专精方向，全栈是创业和独立开发的理想路径",
+    "entry_advice": "建议从一端深入（前端或后端），再学习另一端，Node.js是连接前后端的最佳桥梁，做1-2个完整SaaS项目。",
+    "certifications": [],
+    "hiring_seasons": [
+      "全年，初创公司随时招聘"
+    ]
+  },
+  {
+    "id": "kb_019",
+    "job": "机器人软件工程师",
+    "keywords": [
+      "机器人",
+      "ROS",
+      "机器人操作系统",
+      "自动化",
+      "机器视觉",
+      "工业机器人"
+    ],
+    "description": "机器人软件工程师负责机器人系统的感知、规划和控制软件开发，应用于工业自动化和服务机器人领域。",
+    "core_skills": [
+      "ROS/ROS2",
+      "C++/Python",
+      "机器视觉（OpenCV）",
+      "运动规划算法",
+      "传感器融合（SLAM）",
+      "嵌入式控制"
+    ],
+    "soft_skills": [
+      "跨学科思维（软硬件）",
+      "实验动手能力",
+      "创新思维",
+      "团队协作"
+    ],
+    "promotion_path": "机器人软件工程师 → 高级工程师 → 机器人架构师 → 技术总监",
+    "transfer_options": [
+      "自动驾驶工程师",
+      "AI工程师（视觉方向）",
+      "嵌入式工程师",
+      "学术研究"
+    ],
+    "salary_range": "15-35K/月（自动驾驶方向更高）",
+    "market_outlook": "制造业自动化升级+人形机器人爆发，ROS2工程师需求量快速增长",
+    "entry_advice": "理工科背景（自动化/机电/计算机），扎实C++和ROS基础，参与机器人竞赛或实验室项目积累实战经验。",
+    "certifications": [
+      "ROS认证（ROSCon官方）",
+      "机器人技师职业资格"
+    ],
+    "hiring_seasons": [
+      "全年，新能源汽车和机器人公司秋招多"
+    ]
+  },
+  {
+    "id": "kb_020",
+    "job": "架构师",
+    "keywords": [
+      "架构师",
+      "系统架构",
+      "软件架构",
+      "技术架构",
+      "解决方案架构师",
+      "微服务架构"
+    ],
+    "description": "架构师负责设计系统整体技术架构，平衡性能、可扩展性、安全性和成本，为技术团队提供方向指导。",
+    "core_skills": [
+      "分布式系统设计",
+      "微服务架构（Spring Cloud/K8s）",
+      "数据库选型与设计",
+      "性能调优",
+      "高可用/灾备设计",
+      "云架构"
+    ],
+    "soft_skills": [
+      "全局思维",
+      "技术领导力",
+      "业务理解",
+      "持续学习",
+      "演讲表达"
+    ],
+    "promotion_path": "高级工程师 → 架构师 → 首席架构师 → CTO",
+    "transfer_options": [
+      "技术总监",
+      "CTO",
+      "解决方案顾问",
+      "技术布道师"
+    ],
+    "salary_range": "30-80K/月",
+    "market_outlook": "需要丰富工程经验（通常8年以上），AI架构师（大模型系统设计）成新兴方向",
+    "entry_advice": "无法跳过深度积累直接成为架构师，建议在专精领域成为专家（后端/数据/云），再逐步扩展架构视野。",
+    "certifications": [
+      "TOGAF架构认证",
+      "AWS架构师认证（Professional级）"
+    ],
+    "hiring_seasons": [
+      "社招为主，全年招聘"
+    ]
+  },
+  {
+    "id": "kb_021",
+    "job": "数字化运营专员",
+    "keywords": [
+      "运营",
+      "数字化运营",
+      "增长运营",
+      "用户运营",
+      "内容运营",
+      "活动运营",
+      "社群运营"
+    ],
+    "description": "数字化运营专员通过数据驱动的运营策略，提升用户留存、活跃度和商业转化，为业务增长提供支撑。",
+    "core_skills": [
+      "数据分析（SQL/Excel）",
+      "用户行为分析",
+      "活动策划与执行",
+      "A/B测试",
+      "内容策划",
+      "SEM/SEO基础"
+    ],
+    "soft_skills": [
+      "数据敏感度",
+      "创意策划",
+      "沟通执行力",
+      "用户同理心"
+    ],
+    "promotion_path": "运营专员 → 运营主管 → 运营经理 → 增长总监",
+    "transfer_options": [
+      "产品经理（运营数据驱动）",
+      "数据分析师",
+      "品牌营销",
+      "商业分析"
+    ],
+    "salary_range": "8-20K/月",
+    "market_outlook": "互联网平台运营竞争激烈，私域运营（企业微信/社群）和AIGC运营成新增长点",
+    "entry_advice": "选择细分运营方向（用户/内容/增长），培养数据分析能力，积累具体业务增长案例。",
+    "certifications": [
+      "Google Analytics认证",
+      "SEO/SEM专项认证"
+    ],
+    "hiring_seasons": [
+      "全年，互联网和电商旺季3月和9月"
+    ]
+  },
+  {
+    "id": "kb_022",
+    "job": "量化工程师",
+    "keywords": [
+      "量化",
+      "量化工程师",
+      "量化交易",
+      "量化研究",
+      "Quant",
+      "金融科技",
+      "算法交易"
+    ],
+    "description": "量化工程师负责构建自动化交易策略和风险模型，结合数学、统计和编程能力为金融机构提升投资效率。",
+    "core_skills": [
+      "Python（numpy/pandas/scipy）",
+      "统计学与计量经济学",
+      "机器学习（金融应用）",
+      "C++（高频方向）",
+      "回测框架",
+      "数据库"
+    ],
+    "soft_skills": [
+      "数学思维",
+      "风险意识",
+      "保密意识",
+      "快速学习"
+    ],
+    "promotion_path": "量化研究员/工程师 → 高级量化 → 量化总监 → 基金经理（研究方向）",
+    "transfer_options": [
+      "算法工程师",
+      "数据科学家",
+      "风控模型工程师",
+      "学术研究"
+    ],
+    "salary_range": "30-100K/月（顶尖私募更高）",
+    "market_outlook": "顶尖人才极度稀缺，985/211数理专业硕博背景是门槛，竞争极为激烈",
+    "entry_advice": "扎实的数学基础（概率/统计/最优化）是必要条件，参加量化竞赛（WorldQuant/宽客联盟），优先硕博深造。",
+    "certifications": [
+      "CFA特许金融分析师",
+      "FRM金融风险管理师"
+    ],
+    "hiring_seasons": [
+      "秋招（顶尖私募9-10月）",
+      "春招较少"
+    ]
+  },
+  {
+    "id": "kb_023",
+    "job": "技术支持工程师",
+    "keywords": [
+      "技术支持",
+      "售前",
+      "售后",
+      "技术咨询",
+      "实施工程师",
+      "客户成功"
+    ],
+    "description": "技术支持工程师负责为客户提供产品技术问题解答、故障排查和解决方案建议，是技术与业务的桥梁。",
+    "core_skills": [
+      "产品知识",
+      "SQL基础",
+      "Linux基础",
+      "故障排查方法论",
+      "文档撰写",
+      "客户沟通"
+    ],
+    "soft_skills": [
+      "耐心",
+      "沟通表达",
+      "抗压能力",
+      "学习能力",
+      "客户服务意识"
+    ],
+    "promotion_path": "技术支持 → 高级技术支持 → 技术支持经理 → 客户成功经理 → 解决方案架构师",
+    "transfer_options": [
+      "售前工程师（PreSales）",
+      "产品运营",
+      "技术写作",
+      "项目经理"
+    ],
+    "salary_range": "6-15K/月",
+    "market_outlook": "传统技术支持向客户成功（Customer Success）转型，需具备更强的业务分析能力",
+    "entry_advice": "适合非科班技术入门路径，重点积累产品知识和沟通经验，逐步向售前或CSM（客户成功）方向转型。",
+    "certifications": [
+      "ITIL服务管理认证",
+      "Salesforce管理员认证"
+    ],
+    "hiring_seasons": [
+      "全年"
+    ]
+  },
+  {
+    "id": "kb_024",
+    "job": "游戏开发工程师",
+    "keywords": [
+      "游戏",
+      "游戏开发",
+      "Unity",
+      "Unreal",
+      "C++",
+      "游戏引擎",
+      "客户端",
+      "端游",
+      "手游"
+    ],
+    "description": "游戏开发工程师负责游戏客户端逻辑、渲染、物理引擎集成及性能优化，是游戏核心玩法实现者。",
+    "core_skills": [
+      "Unity3D/Unreal Engine",
+      "C++/C#",
+      "图形渲染（DirectX/OpenGL）",
+      "物理引擎",
+      "Lua脚本",
+      "版本控制（Perforce/Git）"
+    ],
+    "soft_skills": [
+      "创意设计感",
+      "性能优化意识",
+      "团队协作",
+      "需求理解能力"
+    ],
+    "promotion_path": "初级游戏开发 → 中级开发 → 高级开发/技术主程 → 技术总监/项目负责人",
+    "transfer_options": [
+      "图形引擎开发",
+      "VR/AR开发",
+      "客户端开发",
+      "技术产品经理"
+    ],
+    "salary_range": "15-50K/月（应届10-20K，腾讯网易等头部薪酬更高）",
+    "market_outlook": "手游市场进入存量竞争，精品化趋势明显；UE5大规模应用带动高端需求上升，3A游戏团队持续扩招。",
+    "entry_advice": "从Unity入门更易上手，重点学习C#脚本和物理引擎，完成一款完整小游戏（含发布到应用商店）作为作品集。",
+    "certifications": [
+      "Unity Certified Developer",
+      "UE4/UE5官方认证"
+    ],
+    "hiring_seasons": [
+      "3-5月春招",
+      "9-10月秋招",
+      "校园大赛获奖可免笔试"
+    ]
+  },
+  {
+    "id": "kb_025",
+    "job": "iOS开发工程师",
+    "keywords": [
+      "iOS",
+      "苹果开发",
+      "Swift",
+      "Objective-C",
+      "iPhone",
+      "App Store",
+      "移动端"
+    ],
+    "description": "iOS开发工程师负责苹果生态（iPhone/iPad/macOS）的原生应用开发与维护，注重用户体验和系统级能力集成。",
+    "core_skills": [
+      "Swift/Objective-C",
+      "UIKit/SwiftUI",
+      "Xcode",
+      "Core Data",
+      "网络请求（URLSession/Alamofire）",
+      "调试与性能优化"
+    ],
+    "soft_skills": [
+      "美学感知",
+      "用户体验意识",
+      "细节把控",
+      "持续学习（苹果API每年更新）"
+    ],
+    "promotion_path": "初级iOS → 中级iOS → 高级iOS → 技术负责人/架构师",
+    "transfer_options": [
+      "Flutter跨平台开发",
+      "macOS开发",
+      "React Native",
+      "移动端架构师"
+    ],
+    "salary_range": "15-40K/月（应届10-18K，有App Store上架经历加分）",
+    "market_outlook": "iOS岗位需求相对Android略少但薪酬更高，SwiftUI普及加速，Vision Pro开发方向是新增长点。",
+    "entry_advice": "用Swift学SwiftUI开发一款有实际功能的iOS App并上架App Store，这是求职的核心敲门砖。",
+    "certifications": [
+      "Apple Developer认证"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_026",
+    "job": "Android开发工程师",
+    "keywords": [
+      "Android",
+      "安卓开发",
+      "Kotlin",
+      "Java",
+      "Android Studio",
+      "手机APP"
+    ],
+    "description": "Android开发工程师负责安卓平台应用开发，需掌握Kotlin/Java编程及Android系统架构，是国内移动端需求最大的岗位方向之一。",
+    "core_skills": [
+      "Kotlin/Java",
+      "Android SDK",
+      "Jetpack组件（ViewModel/Room/Navigation）",
+      "Retrofit网络库",
+      "性能优化",
+      "多线程协程"
+    ],
+    "soft_skills": [
+      "适配能力（碎片化机型）",
+      "性能敏感度",
+      "版本兼容意识"
+    ],
+    "promotion_path": "初级Android → 中级Android → 高级Android → 技术负责人",
+    "transfer_options": [
+      "Flutter跨平台开发",
+      "React Native",
+      "鸿蒙开发（HarmonyOS）",
+      "后端开发"
+    ],
+    "salary_range": "12-35K/月（应届8-16K，鸿蒙开发方向溢价明显）",
+    "market_outlook": "Android整体需求稳定；华为鸿蒙（HarmonyOS）生态爆发，掌握ArkTS的开发者薪酬显著高于市场均值。",
+    "entry_advice": "用Kotlin+Jetpack完成一个有登录/列表/详情页的App，发布到各大应用市场，同时了解鸿蒙基础开发。",
+    "certifications": [
+      "华为鸿蒙开发者认证（推荐）",
+      "谷歌Associate Android Developer"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_027",
+    "job": "DevOps工程师",
+    "keywords": [
+      "DevOps",
+      "CI/CD",
+      "Jenkins",
+      "Kubernetes",
+      "Docker",
+      "自动化运维",
+      "SRE"
+    ],
+    "description": "DevOps工程师负责打通开发与运维的协作链路，建设CI/CD流水线、基础设施自动化和可观测性体系，是提升交付效率的核心角色。",
+    "core_skills": [
+      "Docker/Kubernetes",
+      "CI/CD（Jenkins/GitLab CI/GitHub Actions）",
+      "Terraform/Ansible（IaC）",
+      "监控（Prometheus/Grafana）",
+      "Shell/Python脚本",
+      "云平台（AWS/阿里云）"
+    ],
+    "soft_skills": [
+      "系统全局视角",
+      "故障应急能力",
+      "沟通协调能力",
+      "安全意识"
+    ],
+    "promotion_path": "初级DevOps → 中级DevOps → 高级DevOps → SRE工程师 → 平台架构师",
+    "transfer_options": [
+      "云架构师",
+      "SRE工程师",
+      "后端开发",
+      "基础设施安全"
+    ],
+    "salary_range": "18-50K/月（应届12-20K，K8s+云原生经验加分明显）",
+    "market_outlook": "云原生转型加速驱动DevOps需求爆发，K8s成为标配，平台工程（Platform Engineering）方向薪酬最高。",
+    "entry_advice": "从Docker+Jenkins入门，在本地搭建完整CI/CD流水线并部署一个项目到K8s集群，记录博客作为求职材料。",
+    "certifications": [
+      "CKA（Kubernetes管理员认证）",
+      "AWS/阿里云认证工程师"
+    ],
+    "hiring_seasons": [
+      "全年招聘，3-5月和9-10月高峰"
+    ]
+  },
+  {
+    "id": "kb_028",
+    "job": "安全工程师",
+    "keywords": [
+      "网络安全",
+      "安全",
+      "渗透测试",
+      "漏洞挖掘",
+      "CTF",
+      "逆向",
+      "安全研究",
+      "红队"
+    ],
+    "description": "安全工程师负责系统漏洞挖掘与修复、渗透测试、安全架构设计和应急响应，是保障企业数字资产安全的关键岗位。",
+    "core_skills": [
+      "渗透测试（Web/移动/网络）",
+      "漏洞分析（OWASP Top10）",
+      "逆向分析（IDA/x64dbg）",
+      "Python安全脚本",
+      "安全扫描工具（Nmap/Burp Suite）",
+      "CTF竞赛经验"
+    ],
+    "soft_skills": [
+      "逆向思维",
+      "严谨细致",
+      "持续学习（漏洞日日新）",
+      "法律合规意识"
+    ],
+    "promotion_path": "安全研究员 → 高级安全工程师 → 安全架构师 → 首席安全官（CISO）",
+    "transfer_options": [
+      "云安全架构师",
+      "红队负责人",
+      "安全产品经理",
+      "合规审计"
+    ],
+    "salary_range": "20-60K/月（应届12-22K，有CVE编号或CTF获奖可大幅提薪）",
+    "market_outlook": "数据安全立法驱动合规需求激增，企业安全预算持续上升；AI安全（模型对抗/提示注入防护）成为新兴方向。",
+    "entry_advice": "参加CTF竞赛积累实战经验，搭建靶场（DVWA/HackTheBox）练习漏洞利用，取得CISP或CEH认证增加背书。",
+    "certifications": [
+      "CISP（注册信息安全专业人员）",
+      "CEH（道德黑客认证）",
+      "OSCP（进攻性安全认证）"
+    ],
+    "hiring_seasons": [
+      "全年招聘，校招3-5月/9-10月"
+    ]
+  },
+  {
+    "id": "kb_029",
+    "job": "数据库管理员",
+    "keywords": [
+      "DBA",
+      "数据库",
+      "MySQL",
+      "Oracle",
+      "PostgreSQL",
+      "数据库运维",
+      "SQL优化"
+    ],
+    "description": "数据库管理员负责数据库架构设计、性能调优、高可用方案和数据备份恢复，是保障业务数据稳定的核心运维角色。",
+    "core_skills": [
+      "MySQL/PostgreSQL/Oracle",
+      "SQL调优与执行计划",
+      "主从复制/分库分表",
+      "备份与恢复（xtrabakup）",
+      "Redis/MongoDB NoSQL",
+      "监控与告警"
+    ],
+    "soft_skills": [
+      "细致谨慎（操作失误代价高）",
+      "系统性思维",
+      "应急响应能力"
+    ],
+    "promotion_path": "初级DBA → 中级DBA → 高级DBA → 数据架构师",
+    "transfer_options": [
+      "数据工程师",
+      "云数据库专家（RDS/TiDB）",
+      "后端开发",
+      "大数据工程师"
+    ],
+    "salary_range": "12-35K/月（应届8-14K，Oracle/TiDB经验加分）",
+    "market_outlook": "传统DBA需求趋于平稳，但云数据库（Aurora/PolarDB/TiDB）运维和NewSQL方向薪酬显著提升。",
+    "entry_advice": "重点掌握MySQL+主从复制+SQL调优三件套，搭建一套高可用架构并记录调优案例，作为求职核心材料。",
+    "certifications": [
+      "OCP（Oracle认证数据库专家）",
+      "MySQL OCP",
+      "TiDB数据库认证"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月"
+    ]
+  },
+  {
+    "id": "kb_030",
+    "job": "技术产品经理",
+    "keywords": [
+      "技术产品经理",
+      "TPM",
+      "产品经理",
+      "技术PM",
+      "需求分析",
+      "产品规划"
+    ],
+    "description": "技术产品经理（TPM）负责技术平台/中台/开发者工具的产品规划与需求管理，需同时具备技术理解力和商业洞察力，是开发与业务之间的核心桥梁。",
+    "core_skills": [
+      "需求分析与文档（PRD/MRD）",
+      "技术可行性评估",
+      "数据分析（SQL/BI工具）",
+      "原型设计（Axure/Figma）",
+      "项目管理（Jira/飞书）",
+      "用户研究"
+    ],
+    "soft_skills": [
+      "技术理解力（核心差异化能力）",
+      "跨部门沟通",
+      "逻辑思维",
+      "商业敏感度"
+    ],
+    "promotion_path": "初级产品经理 → 产品经理 → 高级产品经理 → 产品总监/CPO",
+    "transfer_options": [
+      "业务产品经理",
+      "项目经理（PMP方向）",
+      "技术咨询顾问",
+      "创业"
+    ],
+    "salary_range": "15-50K/月（应届10-18K，有研发背景溢价30-50%）",
+    "market_outlook": "AI产品经理需求暴增，具备LLM产品落地经验的TPM薪酬比普通PM高出30-50%；平台型业务持续扩张。",
+    "entry_advice": "先做1-2年技术开发积累理解力，然后转PM；或选择偏技术的PM实习（如开发者平台、API产品方向）切入。",
+    "certifications": [
+      "PMP（项目管理专业人员认证）",
+      "NPDP（产品开发管理专业人员）"
+    ],
+    "hiring_seasons": [
+      "3-5月",
+      "9-10月",
+      "社招全年"
+    ]
+  }
+]

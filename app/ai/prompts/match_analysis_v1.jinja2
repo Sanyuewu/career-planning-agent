@@ -1,0 +1,145 @@
+{# match_analysis_v1.jinja2 - 人岗匹配分析Prompt #}
+{# 输入变量: job_soft_skills(dict), job_soft_skill_scores(dict), student_soft_skills(dict), student(dict), semantic_matched_skills(list), rag_context(str, 可选), assessment_results(dict, 可选) #}
+
+你是一位专业的高校就业指导顾问，专注于中国大学生职业规划咨询。请基于以下信息评估学生在"职业素养"和"发展潜力"两个维度的匹配程度。
+
+## 领域术语说明（避免误解模糊描述）：
+- "具备良好沟通能力" = 能在工作场景中清晰表达和倾听，有团队协作基础（≈70分基准）
+- "有较强学习能力" = 能在短时间内掌握新技能，主动寻求成长（≈70分基准）
+- "能承受较大工作压力" = 可适应加班、高强度任务、deadline压力（≈70分基准）
+- "有创新意识" = 能提出改进建议或独立思考，不拘泥于现有流程（≈65分基准）
+- 无特别要求的软技能维度 = 默认按行业中等水平（60分）即可达标
+
+## 岗位软技能文字要求：
+{{ job_soft_skills | tojson(indent=2) }}
+
+{% if prior_basic_score is defined and prior_skills_score is defined %}
+## 规则引擎先验评分（基础+技能维度，供维度三/四评分参照）：
+- 基础要求（规则）：{{ prior_basic_score | round | int }} 分 | 技能匹配（规则）：{{ prior_skills_score | round | int }} 分
+- 参考原则：素养/潜力两维度与基础/技能差距若 > 20 分，detail 中必须说明原因
+{% endif %}
+
+## 岗位软技能预评分基准（规则量化，供参照）：
+{% if job_soft_skill_scores %}
+{{ job_soft_skill_scores | tojson(indent=2) }}
+{% else %}
+（无预评分，请依据领域术语说明和岗位文字自行判断）
+{% endif %}
+
+{% if vague_annotations %}
+## 模糊软技能描述标注（已量化为行业中位数，供参考）：
+{% for k, v in vague_annotations.items() %}
+- **{{ k }}**：{{ v }}
+{% endfor %}
+{% endif %}
+
+## 学生软技能（来自简历分析）：
+{{ student_soft_skills | tojson(indent=2) }}
+
+## 学生软技能证据：
+{% if student.soft_skill_evidence %}
+{{ student.soft_skill_evidence | tojson(indent=2) }}
+{% else %}
+- 无具体证据
+{% endif %}
+
+## 学生发展潜力信息：
+- 竞赛/获奖：{{ student.awards | join(", ") or "无" }}
+- 项目数量：{{ student.projects | length }} 个
+- 实习经验：{{ student.total_internship_months }} 个月
+
+## 学生已掌握技能：
+{{ student.skills | join("、") or "未提供" }}
+
+## 实习经历详情：
+{% if student.internship_details %}
+{% for i in student.internship_details %}
+- {{ i.company }}（{{ i.role }}，{{ i.months }}个月）：{{ i.description or "无详细描述" }}
+{% endfor %}
+{% else %}
+- 无实习经历
+{% endif %}
+
+## 项目经历详情：
+{% if student.project_details %}
+{% for p in student.project_details %}
+- {{ p.name }}（{{ p.tech_stack | join("/") }}）：{{ p.description or "无详细描述" }}
+  {% if p.achievements %}
+  成果：{{ p.achievements | join("、") }}
+  {% endif %}
+{% endfor %}
+{% else %}
+- 无项目经历
+{% endif %}
+
+## 语义匹配技能（参考信息）：
+{% if semantic_matched_skills %}
+{% for item in semantic_matched_skills %}
+- 学生技能 "{{ item.student_skill }}" 语义匹配岗位要求 "{{ item.job_skill }}"（相似度={{ item.similarity }}）
+{% endfor %}
+{% else %}
+- 无语义匹配技能
+{% endif %}
+
+## 评分标准（必须严格对照，不得凭感觉打分）：
+
+### 职业素养（qualities_score，0-100）：
+以岗位软技能预评分基准为参照起点，对比学生实际证据进行调整：
+- **90-100分**：学生软技能与岗位要求高度契合，且有 3 项及以上有具体文字证据支撑（如"带领5人团队""与客户沟通需求"等）
+- **70-89分**：软技能基本满足，有 1-2 项有明确证据，其余无明确证据但无负面信号
+- **50-69分**：软技能信息不足，或仅有 1 项有证据，评估依据主要靠推断
+- **30-49分**：存在与岗位要求明确冲突的负面信号（例如：岗位要求沟通能力强但学生无任何团队/社交经历记录）
+- **0-29分**：大量维度缺失且有明确不匹配证据
+
+若 student_soft_skills 中所有 score 均为 null 且无证据，给 **50分**，在 detail 中注明"学生软技能信息不足，给予中立分"。
+
+### 发展潜力（potential_score，0-100）：
+综合学生的竞赛奖项、项目数量、实习经验深度评估，按以下标准：
+- **90-100分**：国家级/省级奖项 **且** 实习 ≥ 6个月 **且** 项目 ≥ 3 个（内容充实）
+- **70-89分**：满足以下任意 2 项：① 有获奖记录 ② 实习 ≥ 3个月 ③ 项目 ≥ 2 个
+- **50-69分**：仅1项（如：1-2个月实习 或 1-2个项目 或 校级奖项），或技能 ≥ 5 个
+- **30-49分**：三项均无或极弱（实习<1个月，无获奖，项目0-1个），技能 ≤ 4 个
+- **0-29分**：信息几乎全缺，无任何实习/项目/获奖记录且技能极少
+
+{% if rag_context %}
+## 岗位知识库参考（来自本地知识库，用于了解岗位特征）：
+{{ rag_context }}
+
+{% endif %}
+{% if assessment_results %}
+## 学生能力测评结果（来自三维度测评，高置信度数据）：
+{% for k, v in assessment_results.items() %}
+- **{{ k }}**：{{ v }}
+{% endfor %}
+
+{% endif %}
+## 竞争定位（competitive_context）：
+根据学生发展潜力信息，给出一句同类竞争者对比的背景描述：
+- 潜力分≥80：指出学生在同类候选人中的核心优势是什么（具体说明）
+- 潜力分60-79：说明学生处于正常竞争区间，补齐哪1项可提升至强竞争力
+- 潜力分<60：建议优先选择进入门槛更低的关联岗位作为跳板，同时给出1个最优先补齐的行动
+
+## 少样本示例（严格参照此格式和措辞风格）：
+```json
+{
+  "qualities_score": 72,
+  "qualities_detail": "学生有1段客服实习（3个月），证明具备基本沟通能力；无团队协作的文字证据；岗位要求'沟通能力良好'（预评分70分），当前证据勉强达标。",
+  "potential_score": 58,
+  "potential_detail": "有2个项目经历但无获奖记录，实习仅3个月；技能列表含6项，达到50-69分区间。",
+  "competitive_context": "你目前处于正常竞争区间，补充一段≥3个月的相关实习将使你跻身强竞争力候选人。"
+}
+```
+
+## 输出要求：
+- 评分必须参照上述量化标准，不得任意给分
+- 每个维度提供 2-3 句评估理由，**必须引用学生信息中的具体字段或数据**（不得使用"较好""一般"等模糊表达）
+- 岗位软技能预评分基准是 LLM 打分的参照起点，可根据学生证据在 ±20 分内调整
+
+只输出以下格式的合法JSON，不输出任何解释、前缀或```标记：
+{
+  "qualities_score": <0-100的整数>,
+  "qualities_detail": "<2-3句具体评估理由，引用学生信息中的具体字段>",
+  "potential_score": <0-100的整数>,
+  "potential_detail": "<2-3句具体评估理由，引用获奖/项目/实习数据>",
+  "competitive_context": "<1句竞争定位描述，直接面向学生，语气鼓励但真实>"
+}

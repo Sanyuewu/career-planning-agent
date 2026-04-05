@@ -1,0 +1,118 @@
+{# report_action_plan_v1.jinja2 - 报告行动计划章节Prompt #}
+{# 输入变量: job_title, job_level, overall_score, skill_gaps, student_grade, internship_months, student_skills, matched_skills, internship_details, project_details, competitiveness_level, dimension_scores, dimension_confidence, competitive_context, avg_salary_k, jd_count, top_companies #}
+
+你是一位务实的职业规划顾问。基于以下分析结果，制定具体的行动计划。
+
+## 目标岗位：{{ job_title }}（{{ job_level }}）
+
+## 综合匹配度：{{ overall_score }}分
+
+## 各维度得分：
+{% if dimension_scores %}
+- 基础要求：{{ dimension_scores.basic }}分
+- 职业技能：{{ dimension_scores.skills }}分
+- 职业素养：{{ dimension_scores.qualities }}分
+- 发展潜力：{{ dimension_scores.potential }}分
+{% endif %}
+
+## 各维度置信度：
+{% if dimension_confidence %}
+- 基础要求：{{ (dimension_confidence.basic * 100) | round(1) }}%
+- 职业技能：{{ (dimension_confidence.skills * 100) | round(1) }}%
+- 职业素养：{{ (dimension_confidence.qualities * 100) | round(1) }}%
+- 发展潜力：{{ (dimension_confidence.potential * 100) | round(1) }}%
+{% endif %}
+
+## 竞争定位：
+{% if competitive_context %}
+{{ competitive_context }}
+{% endif %}
+
+## 需要补齐的技能差距：
+{% for gap in skill_gaps %}
+- {{ gap.skill }}（重要性：{{ gap.importance }}，建议：{{ gap.suggestion }}）
+{% endfor %}
+
+## 学生当前状态
+- 年级：{{ student_grade }}
+- 实习经验：{{ internship_months }}个月
+- 竞争力评级：{{ competitiveness_level }}
+- 已掌握技能：{{ student_skills | join('、') }}
+- 已匹配岗位技能：{{ matched_skills | join('、') }}
+
+## 市场参考数据（真实JD数据）
+{% if jd_count %}
+- 当前市场在招岗位：约 {{ jd_count }} 个
+{% endif %}
+{% if avg_salary_k %}
+- 平均月薪：{{ avg_salary_k }}K/月
+{% endif %}
+{% if top_companies %}
+- 主要招聘企业：{{ top_companies[:5] | join('、') }}
+{% endif %}
+
+## 实习经历摘要
+{% for i in internship_details %}
+- {{ i.company }}（{{ i.role }}，{{ i.months }}个月）
+  {% if i.description %}
+  描述：{{ i.description }}
+  {% endif %}
+  {% if i.achievements %}
+  成果：{{ i.achievements | join('、') }}
+  {% endif %}
+{% endfor %}
+
+## 项目经历摘要
+{% for p in project_details %}
+- {{ p.name }}（技术栈：{{ p.tech_stack | join('/') }}）
+  {% if p.description %}
+  描述：{{ p.description }}
+  {% endif %}
+  {% if p.achievements %}
+  成果：{{ p.achievements | join('、') }}
+  {% endif %}
+  {% if p.github_url %}
+  GitHub：{{ p.github_url }}
+  {% endif %}
+{% endfor %}
+
+请制定：
+
+### 0. 30天冲刺计划（最优先）
+**针对当前求职周期最紧迫的事项，帮助用户立即行动。**分为三段：
+- **第1-7天**：聚焦1个最高优先级must_have技能缺口，给出具体学习资源或实操任务
+- **第8-20天**：简历强化（基于已有信息，写出2个可量化的项目亮点）
+- **第21-30天**：投递准备（针对目标岗位的JD关键词，优化简历和自我介绍）
+
+### 1. 短期行动计划（0-6个月）
+专注于补齐must_have技能缺口，每项含具体行动和时间节点。
+
+### 2. 中期行动计划（6-24个月）
+聚焦竞争力提升，含实习目标和里程碑。
+
+## 格式要求（严格遵守）：
+- 每项行动必须是具体可执行的，如"用2周完成官方Vue3教程+1个Todo项目实践"
+- 禁止空泛建议，如"多学习前端技术"
+- 时间节点必须是具体范围，如"第1-2周""第2个月内"
+- 30天冲刺计划3项（对应三段），短期计划3-5项，中期计划3-4项
+- **个性化要求**：结合学生的实习经历和项目经历，给出针对性的建议
+
+## 强制个性化规则（违反则输出无效）：
+1. sprint_30days 的每一项 description 中，**必须明确点名** skill_gaps 列表中的至少一个具体技能名称（如"Redis"、"Spring Boot"），不得泛称"后端技术"
+2. short_term 的每一项，必须从 skill_gaps 中选取对应技能，在 jd_source 字段注明"源自缺口技能：XXX"
+3. 若学生有实习经历（internship_details非空），中期计划中至少1项必须基于已有实习公司或岗位类型给出进阶建议
+4. 若学生有项目经历（project_details非空），sprint_30days 中至少1项必须提到基于现有项目的改进或延伸任务
+5. **绝对禁止**输出以下通用词汇作为完整建议：「多刷题」「持续学习」「提升自我」「扩展知识面」「了解行业动态」
+
+只输出以下格式的合法JSON，不输出任何其他内容：
+{
+  "sprint_30days": [
+    {"title": "<简短标题>", "timeline": "<第X-Y天>", "description": "<具体可操作步骤>", "verification": "<完成标志>"}
+  ],
+  "short_term": [
+    {"title": "<简短标题>", "timeline": "<具体时间>", "description": "<详细步骤>", "verification": "<验证方式>", "jd_source": "<来源引用>"}
+  ],
+  "mid_term": [
+    {"title": "<简短标题>", "milestone": "<里程碑>", "description": "<详细内容>"}
+  ]
+}

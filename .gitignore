@@ -1,0 +1,93 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite3
+
+# Uploads
+uploads/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Chroma
+data/chroma_db/
+
+# AI/IDE generated files
+.trae/
+.claude/
+
+# Pre-trained models - use scripts/download_models.py to download
+models/
+
+# Generated reports
+data/reports/
+
+# Production env (use template instead)
+.env.production
+
+# Development tracking docs
+docs/开发任务跟踪.md
+
+# Root level docs and data files (not for repo)
+/*.xls
+/*.docx
