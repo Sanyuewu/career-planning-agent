@@ -1,17 +1,25 @@
 # AI 职业规划智能体 - 前端
+# 阶段1: 构建
 FROM node:20-alpine as builder
 
 WORKDIR /app
 
-# 安装依赖
-COPY package*.json ./
-RUN npm install
+# 设置 Node.js 内存限制
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
-# 复制代码并构建
+# 先复制依赖文件，利用缓存
+COPY package*.json ./
+
+# 安装依赖
+RUN npm install --legacy-peer-deps
+
+# 复制源代码
 COPY . .
+
+# 构建生产版本
 RUN npm run build
 
-# 生产环境
+# 阶段2: 生产环境
 FROM nginx:alpine
 
 # 复制构建产物
