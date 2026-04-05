@@ -24,6 +24,7 @@ _DEFAULT_JWT_SECRET = "career-planner-secret-key-change-in-production"
 class Settings(BaseSettings):
     APP_ENV: Literal["development", "production"] = "development"
     LOG_LEVEL: str = "INFO"
+    CORS_ORIGINS: str = ""  # 逗号分隔的允许域名列表，如 "https://a.vercel.app,https://b.vercel.app"
     
     LLM_PROVIDER: Literal["deepseek", "qwen", "ollama", "groq"] = "deepseek"
     LLM_API_KEY: str = ""

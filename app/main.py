@@ -116,8 +116,10 @@ async def llm_error_handler(request: Request, exc: LLMCallError):
 
 # CORS
 def _get_cors_origins() -> List[str]:
+    if settings.CORS_ORIGINS:
+        return [origin.strip() for origin in settings.CORS_ORIGINS.split(",") if origin.strip()]
     if settings.APP_ENV == "production":
-        return ["https://your-domain.com"]
+        return ["*"]
     return [
         f"http://localhost:{p}" for p in (5173, 5174, 5175, 5176, 5177, 3000)
     ] + [

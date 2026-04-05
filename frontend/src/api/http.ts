@@ -2,8 +2,10 @@ import axios from 'axios'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import { Message } from '@arco-design/web-vue'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE || ''
+
 const http: AxiosInstance = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL ? `${API_BASE_URL}/api` : '/api',
   timeout: 90000,
   headers: {
     'Content-Type': 'application/json',
