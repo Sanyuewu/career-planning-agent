@@ -101,7 +101,7 @@ fuchuang2.0/
 
 **不必须。** 公开仓库默认按 Demo Mode 组织：没有 `youtu-graphrag/`、本地 embedding 模型和原始招聘数据时，后端仍可启动，登录、画像、基础匹配、报告等基础流程可通过 `examples/` 中的脱敏数据验证。
 
-如果需要完整 GraphRAG 能力，则进入 Full Mode：需要在项目根目录准备 `youtu-graphrag/`、`models/all-MiniLM-L6-v2/` 和授权招聘数据，并按职业领域 schema 生成图谱与 FAISS 缓存。
+如果需要完整 GraphRAG 能力，则进入 Full Mode：需要参考官方开源仓库 [TencentCloudADP/youtu-graphrag](https://github.com/TencentCloudADP/youtu-graphrag) 准备 `youtu-graphrag/`，并在项目根目录放置 `models/all-MiniLM-L6-v2/`、授权招聘数据、职业领域 schema、图谱与 FAISS 缓存。
 
 结合当前实现，`app/services/youtu_retriever_service.py` 会尝试从 `youtu-graphrag/` 导入官方检索组件：
 
@@ -115,7 +115,7 @@ fuchuang2.0/
 - `youtu-graphrag/retriever/faiss_cache_new/career/`
 - `models/all-MiniLM-L6-v2/`
 
-这些路径对应 [Youtu-GraphRAG](https://arxiv.org/abs/2508.19855) 的官方思路：用 schema 约束图谱构建，基于层级知识组织与 agentic retriever 做复杂问题分解和图谱检索。本项目只保留适配层与业务服务代码；第三方 vendor、模型权重、原始数据和预构建索引属于本地/授权运行资产，不随公开仓库发布。
+这些路径对应 Youtu-GraphRAG 的[官方开源实现](https://github.com/TencentCloudADP/youtu-graphrag) 与[论文](https://arxiv.org/abs/2508.19855)：用 schema 约束图谱构建，基于层级知识组织与 agentic retriever 做复杂问题分解和图谱检索。本项目只保留适配层与业务服务代码；第三方 vendor、模型权重、原始数据和预构建索引属于本地/授权运行资产，不随公开仓库发布。
 
 如果官方组件或运行资产缺失，适配器会把 `YOUTU_AVAILABLE` 置为不可用，并回退到内置岗位/技能检索或返回空结果；这不是缺文件导致项目不可运行，而是公开 Demo 的预期降级行为。
 
