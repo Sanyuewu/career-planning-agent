@@ -29,7 +29,7 @@
 | LLM 接入 | OpenAI 兼容协议，支持 DeepSeek / Qwen / Groq 等 Provider |
 | 文档解析 | PyMuPDF · python-docx |
 | 报告导出 | reportlab · python-docx |
-| 工程化 | Redis 可选缓存 · Postgres 生产库 · Docker Compose · GitHub Actions |
+| 工程化 | Redis 可选缓存 · Postgres 生产库 · Docker Compose · 环境模板 |
 
 ---
 
@@ -97,14 +97,36 @@ fuchuang2.0/
 
 ## 本地运行资产
 
+### 是否必须下载 `youtu-graphrag/`？
+
+**不必须。** 公开仓库默认按 Demo Mode 组织：没有 `youtu-graphrag/`、本地 embedding 模型和原始招聘数据时，后端仍可启动，登录、画像、基础匹配、报告等基础流程可通过 `examples/` 中的脱敏数据验证。
+
+如果需要完整 GraphRAG 能力，则进入 Full Mode：需要在项目根目录准备 `youtu-graphrag/`、`models/all-MiniLM-L6-v2/` 和授权招聘数据，并按职业领域 schema 生成图谱与 FAISS 缓存。
+
+结合当前实现，`app/services/youtu_retriever_service.py` 会尝试从 `youtu-graphrag/` 导入官方检索组件：
+
+- `models.retriever.enhanced_kt_retriever.KTRetriever`
+- `models.retriever.agentic_decomposer.GraphQ`
+
+同时读取以下运行资产：
+
+- `youtu-graphrag/schemas/career.json`
+- `youtu-graphrag/output/graphs/career_new.json`
+- `youtu-graphrag/retriever/faiss_cache_new/career/`
+- `models/all-MiniLM-L6-v2/`
+
+这些路径对应 [Youtu-GraphRAG](https://arxiv.org/abs/2508.19855) 的官方思路：用 schema 约束图谱构建，基于层级知识组织与 agentic retriever 做复杂问题分解和图谱检索。本项目只保留适配层与业务服务代码；第三方 vendor、模型权重、原始数据和预构建索引属于本地/授权运行资产，不随公开仓库发布。
+
+如果官方组件或运行资产缺失，适配器会把 `YOUTU_AVAILABLE` 置为不可用，并回退到内置岗位/技能检索或返回空结果；这不是缺文件导致项目不可运行，而是公开 Demo 的预期降级行为。
+
 | 资产 | 路径 | 说明 |
 |---|---|---|
-| GraphRAG 引擎/图谱 | `youtu-graphrag/` | 本地或授权环境准备，公开仓库不提交第三方 vendor 与预构建索引 |
-| 嵌入模型 | `models/all-MiniLM-L6-v2/` | 本地 384 维 embedding 模型，建议通过下载脚本、镜像层或对象存储管理 |
+| GraphRAG 引擎/图谱 | `youtu-graphrag/` | Full Mode 才需要；公开仓库不提交第三方 vendor 与预构建索引 |
+| 嵌入模型 | `models/all-MiniLM-L6-v2/` | Full Mode 建议本地准备；缺失时可能尝试按模型名加载或走降级 |
 | 招聘数据 | `data/raw/preprocessed_for_llm.csv` | 授权数据，本地用于市场数据与样本检索；公开仓库仅保留说明 |
 | 原始表格 | `data/raw/20260226105856_457.xls` | 企业/比赛原始数据冷备，不进入公开仓库 |
 
-缺少这些资产时，核心后端仍可启动，GraphRAG 与市场样本相关接口会走内置降级或返回空结果。
+缺少这些资产时，核心后端仍可启动；GraphRAG、市场样本和职业知识增强相关接口会走内置降级或返回空结果。
 
 ---
 
