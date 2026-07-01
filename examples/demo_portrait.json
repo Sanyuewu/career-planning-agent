@@ -1,0 +1,47 @@
+{
+  "student_id": "00000000-0000-4000-8000-000000000001",
+  "name": "演示学生A",
+  "skills": [
+    "Python",
+    "FastAPI",
+    "SQL",
+    "Vue3",
+    "数据分析",
+    "Git"
+  ],
+  "certificates": [
+    "CET-6"
+  ],
+  "innovation": "良好",
+  "learning": "优秀",
+  "stress_resistance": "良好",
+  "communication": "良好",
+  "internship": "一般",
+  "education": [
+    {
+      "school": "示例大学",
+      "major": "计算机科学与技术",
+      "degree": "本科",
+      "period": "2022-2026"
+    }
+  ],
+  "projects": [
+    {
+      "name": "校园职业规划系统",
+      "description": "使用 FastAPI 和 Vue3 实现学生画像、岗位匹配和报告生成基础流程。"
+    }
+  ],
+  "internships": [],
+  "career_intent": "后端开发工程师",
+  "interests": [
+    "AI 应用开发",
+    "后端工程",
+    "数据分析"
+  ],
+  "job_preferences": {
+    "city": "西安",
+    "work_style": "研发岗"
+  },
+  "completeness_score": 86,
+  "competitiveness_score": 78
+}

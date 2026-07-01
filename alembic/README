@@ -1,0 +1,18 @@
+数据库迁移（Alembic）
+
+env.py 复用应用的 Base 元数据与 SYNC_DB_URL（见 app/core/database.py），
+URL 来自 settings.DATABASE_URL（同步派生），单一事实源，无需在 alembic.ini 配 URL。
+
+常用命令（项目根目录）：
+  改了模型后生成迁移：  alembic revision --autogenerate -m "描述"
+  应用到最新：          alembic upgrade head
+  回退一步：            alembic downgrade -1
+  查看当前版本：        alembic current
+
+环境约定：
+  - development：应用启动时 create_all 便捷建表（app/main.py lifespan）。
+  - production ：启动前先 `alembic upgrade head`，应用不再 create_all。
+  - 已有数据的库首次接入：`alembic stamp head` 标记为当前版本，避免重复建表。
+
+切换 PostgreSQL：设置 DATABASE_URL=postgresql+asyncpg://user:pwd@host/db，
+env.py 会自动派生同步 URL 用于迁移。

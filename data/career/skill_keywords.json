@@ -1,0 +1,268 @@
+{
+  "技术技能": {
+    "编程语言": {
+      "Python": {"aliases": ["python", "py", "python3"], "category": "后端"},
+      "Java": {"aliases": ["java", "jdk", "j2ee"], "category": "后端"},
+      "JavaScript": {"aliases": ["js", "javascript", "ecmascript", "es6"], "category": "前端"},
+      "TypeScript": {"aliases": ["ts", "typescript"], "category": "前端"},
+      "C++": {"aliases": ["cpp", "c++", "c plus plus", "c/c++"], "category": "系统"},
+      "C": {"aliases": ["c语言", "c lang"], "category": "系统"},
+      "Go": {"aliases": ["golang", "go语言"], "category": "后端"},
+      "Rust": {"aliases": ["rust", "rust语言"], "category": "系统"},
+      "PHP": {"aliases": ["php"], "category": "后端"},
+      "Ruby": {"aliases": ["ruby", "rb"], "category": "后端"},
+      "Swift": {"aliases": ["swift"], "category": "移动端"},
+      "Kotlin": {"aliases": ["kotlin", "kt"], "category": "移动端"},
+      "Scala": {"aliases": ["scala"], "category": "大数据"},
+      "R": {"aliases": ["r语言", "r语言统计"], "category": "数据科学"},
+      "MATLAB": {"aliases": ["matlab"], "category": "科学计算"},
+      "Shell": {"aliases": ["shell", "bash", "shell脚本"], "category": "运维"},
+      "SQL": {"aliases": ["sql", "结构化查询语言"], "category": "数据库"}
+    },
+    "前端框架": {
+      "Vue.js": {"aliases": ["vue", "vuejs", "vue.js", "vue2", "vue3"], "category": "前端"},
+      "React": {"aliases": ["react", "reactjs", "react.js", "react16", "react18"], "category": "前端"},
+      "Angular": {"aliases": ["angular", "angularjs", "angular2+"], "category": "前端"},
+      "Next.js": {"aliases": ["nextjs", "next.js", "next"], "category": "前端"},
+      "Nuxt.js": {"aliases": ["nuxtjs", "nuxt.js", "nuxt"], "category": "前端"},
+      "Svelte": {"aliases": ["svelte"], "category": "前端"},
+      "jQuery": {"aliases": ["jquery", "jq"], "category": "前端"},
+      "Bootstrap": {"aliases": ["bootstrap", "bs"], "category": "前端"},
+      "Element UI": {"aliases": ["element", "elementui", "element-ui"], "category": "前端"},
+      "Ant Design": {"aliases": ["antd", "ant design", "ant-design"], "category": "前端"},
+      "Vant": {"aliases": ["vant", "vant ui"], "category": "移动端"},
+      "Uni-app": {"aliases": ["uniapp", "uni-app"], "category": "移动端"},
+      "Electron": {"aliases": ["electron"], "category": "桌面端"}
+    },
+    "后端框架": {
+      "Spring Boot": {"aliases": ["springboot", "spring boot", "spring-boot", "sb"], "category": "后端"},
+      "Spring Cloud": {"aliases": ["springcloud", "spring cloud", "spring-cloud"], "category": "微服务"},
+      "Django": {"aliases": ["django"], "category": "后端"},
+      "Flask": {"aliases": ["flask"], "category": "后端"},
+      "FastAPI": {"aliases": ["fastapi", "fast api"], "category": "后端"},
+      "Tornado": {"aliases": ["tornado"], "category": "后端"},
+      "Express": {"aliases": ["express", "expressjs"], "category": "后端"},
+      "Koa": {"aliases": ["koa", "koajs"], "category": "后端"},
+      "NestJS": {"aliases": ["nestjs", "nest.js"], "category": "后端"},
+      "Gin": {"aliases": ["gin"], "category": "后端"},
+      "Beego": {"aliases": ["beego"], "category": "后端"},
+      "Laravel": {"aliases": ["laravel"], "category": "后端"},
+      "ThinkPHP": {"aliases": ["thinkphp", "tp"], "category": "后端"},
+      "MyBatis": {"aliases": ["mybatis", "mybatis-plus"], "category": "ORM"},
+      "Hibernate": {"aliases": ["hibernate", "jpa"], "category": "ORM"},
+      "SQLAlchemy": {"aliases": ["sqlalchemy"], "category": "ORM"}
+    },
+    "数据库": {
+      "MySQL": {"aliases": ["mysql"], "category": "关系型数据库"},
+      "PostgreSQL": {"aliases": ["postgresql", "postgres", "pgsql", "pg"], "category": "关系型数据库"},
+      "MongoDB": {"aliases": ["mongodb", "mongo"], "category": "文档数据库"},
+      "Redis": {"aliases": ["redis"], "category": "缓存"},
+      "Oracle": {"aliases": ["oracle"], "category": "关系型数据库"},
+      "SQL Server": {"aliases": ["sqlserver", "sql server", "mssql"], "category": "关系型数据库"},
+      "SQLite": {"aliases": ["sqlite"], "category": "嵌入式数据库"},
+      "MariaDB": {"aliases": ["mariadb"], "category": "关系型数据库"},
+      "Elasticsearch": {"aliases": ["elasticsearch", "es", "elastic"], "category": "搜索引擎"},
+      "ClickHouse": {"aliases": ["clickhouse"], "category": "列式数据库"},
+      "Cassandra": {"aliases": ["cassandra"], "category": "分布式数据库"},
+      "DynamoDB": {"aliases": ["dynamodb"], "category": "NoSQL"},
+      "Neo4j": {"aliases": ["neo4j"], "category": "图数据库"}
+    },
+    "大数据": {
+      "Hadoop": {"aliases": ["hadoop"], "category": "大数据"},
+      "Spark": {"aliases": ["spark", "apache spark"], "category": "大数据"},
+      "Flink": {"aliases": ["flink", "apache flink"], "category": "流处理"},
+      "Kafka": {"aliases": ["kafka", "apache kafka"], "category": "消息队列"},
+      "Hive": {"aliases": ["hive", "apache hive"], "category": "数据仓库"},
+      "HBase": {"aliases": ["hbase"], "category": "NoSQL"},
+      "Storm": {"aliases": ["storm", "apache storm"], "category": "流处理"},
+      "Presto": {"aliases": ["presto"], "category": "SQL引擎"},
+      "Airflow": {"aliases": ["airflow", "apache airflow"], "category": "调度"},
+      "DataX": {"aliases": ["datax"], "category": "数据同步"},
+      "Sqoop": {"aliases": ["sqoop"], "category": "数据同步"}
+    },
+    "AI/机器学习": {
+      "TensorFlow": {"aliases": ["tensorflow", "tf"], "category": "深度学习"},
+      "PyTorch": {"aliases": ["pytorch", "torch"], "category": "深度学习"},
+      "Keras": {"aliases": ["keras"], "category": "深度学习"},
+      "Scikit-learn": {"aliases": ["sklearn", "scikit-learn", "scikit learn"], "category": "机器学习"},
+      "Pandas": {"aliases": ["pandas"], "category": "数据分析"},
+      "NumPy": {"aliases": ["numpy"], "category": "数值计算"},
+      "OpenCV": {"aliases": ["opencv", "cv"], "category": "计算机视觉"},
+      "NLP": {"aliases": ["nlp", "自然语言处理", "自然语言"], "category": "NLP"},
+      "BERT": {"aliases": ["bert"], "category": "NLP"},
+      "GPT": {"aliases": ["gpt", "chatgpt", "llm", "大模型"], "category": "NLP"},
+      "Transformers": {"aliases": ["transformers", "huggingface"], "category": "NLP"},
+      "YOLO": {"aliases": ["yolo"], "category": "计算机视觉"},
+      "CNN": {"aliases": ["cnn", "卷积神经网络"], "category": "深度学习"},
+      "RNN": {"aliases": ["rnn", "循环神经网络"], "category": "深度学习"},
+      "LSTM": {"aliases": ["lstm"], "category": "深度学习"},
+      "GAN": {"aliases": ["gan", "生成对抗网络"], "category": "深度学习"}
+    },
+    "云计算/DevOps": {
+      "Docker": {"aliases": ["docker", "容器"], "category": "容器"},
+      "Kubernetes": {"aliases": ["k8s", "kubernetes", "k8s集群"], "category": "容器编排"},
+      "Jenkins": {"aliases": ["jenkins"], "category": "CI/CD"},
+      "Git": {"aliases": ["git", "git版本控制"], "category": "版本控制"},
+      "GitLab": {"aliases": ["gitlab"], "category": "DevOps平台"},
+      "GitHub": {"aliases": ["github", "gh"], "category": "代码托管"},
+      "AWS": {"aliases": ["aws", "amazon web services", "亚马逊云"], "category": "云服务"},
+      "Azure": {"aliases": ["azure", "microsoft azure", "微软云"], "category": "云服务"},
+      "GCP": {"aliases": ["gcp", "google cloud", "谷歌云"], "category": "云服务"},
+      "阿里云": {"aliases": ["aliyun", "阿里云", "alibaba cloud"], "category": "云服务"},
+      "腾讯云": {"aliases": ["tencent cloud", "腾讯云"], "category": "云服务"},
+      "华为云": {"aliases": ["huawei cloud", "华为云"], "category": "云服务"},
+      "CI/CD": {"aliases": ["cicd", "ci/cd", "持续集成", "持续部署"], "category": "DevOps"},
+      "Terraform": {"aliases": ["terraform"], "category": "基础设施即代码"},
+      "Ansible": {"aliases": ["ansible"], "category": "自动化运维"},
+      "Prometheus": {"aliases": ["prometheus"], "category": "监控"},
+      "Grafana": {"aliases": ["grafana"], "category": "可视化"}
+    },
+    "测试": {
+      "Selenium": {"aliases": ["selenium"], "category": "自动化测试"},
+      "JUnit": {"aliases": ["junit"], "category": "单元测试"},
+      "pytest": {"aliases": ["pytest", "py.test"], "category": "单元测试"},
+      "JMeter": {"aliases": ["jmeter"], "category": "性能测试"},
+      "Postman": {"aliases": ["postman"], "category": "接口测试"},
+      "Mock": {"aliases": ["mock", "mockito"], "category": "测试"},
+      "Jest": {"aliases": ["jest"], "category": "前端测试"},
+      "Cypress": {"aliases": ["cypress"], "category": "E2E测试"}
+    },
+    "移动开发": {
+      "Android": {"aliases": ["android", "安卓", "android开发"], "category": "移动端"},
+      "iOS": {"aliases": ["ios", "iphone开发"], "category": "移动端"},
+      "Flutter": {"aliases": ["flutter"], "category": "跨平台"},
+      "React Native": {"aliases": ["react native", "rn", "react-native"], "category": "跨平台"},
+      "Weex": {"aliases": ["weex"], "category": "跨平台"},
+      "小程序": {"aliases": ["小程序", "微信小程序", "miniprogram"], "category": "小程序"}
+    },
+    "网络安全": {
+      "网络安全": {"aliases": ["网络安全", "信息安全", "安全"], "category": "安全"},
+      "渗透测试": {"aliases": ["渗透测试", "渗透", "penetration"], "category": "安全"},
+      "漏洞挖掘": {"aliases": ["漏洞挖掘", "漏洞分析"], "category": "安全"},
+      "加密算法": {"aliases": ["加密", "加密算法", "密码学"], "category": "安全"},
+      "OWASP": {"aliases": ["owasp"], "category": "安全"}
+    }
+  },
+  "软技能": {
+    "沟通能力": {
+      "keywords": ["团队协作", "客户沟通", "跨部门协作", "演讲", "汇报", "协调", "沟通协调", "表达能力", "人际交往"],
+      "weight": 1.0
+    },
+    "学习能力": {
+      "keywords": ["快速学习", "持续学习", "自学能力", "学习新技术", "知识分享", "技术钻研"],
+      "weight": 1.0
+    },
+    "抗压能力": {
+      "keywords": ["加班", "紧急项目", "高强度", "deadline", "截止日期", "压力", "多任务", "时间管理"],
+      "weight": 1.0
+    },
+    "创新能力": {
+      "keywords": ["创新", "专利", "论文", "技术攻关", "研发", "突破", "技术改进", "优化方案"],
+      "weight": 1.0
+    },
+    "领导能力": {
+      "keywords": ["团队管理", "项目管理", "带领团队", "指导新人", "技术负责人"],
+      "weight": 1.2
+    },
+    "问题解决": {
+      "keywords": ["问题解决", "故障排查", "debug", "调试", "分析问题", "解决能力"],
+      "weight": 1.0
+    }
+  },
+  "证书": {
+    "英语": {
+      "CET-4": {"aliases": ["cet4", "cet-4", "英语四级", "大学英语四级"], "level": "基础"},
+      "CET-6": {"aliases": ["cet6", "cet-6", "英语六级", "大学英语六级"], "level": "中级"},
+      "TOEFL": {"aliases": ["toefl", "托福"], "level": "高级"},
+      "IELTS": {"aliases": ["ielts", "雅思"], "level": "高级"},
+      "BEC": {"aliases": ["bec", "商务英语"], "level": "中级"}
+    },
+    "计算机": {
+      "计算机二级": {"aliases": ["计算机二级", "ncre二级", "全国计算机等级考试二级"], "level": "基础"},
+      "计算机三级": {"aliases": ["计算机三级", "ncre三级"], "level": "中级"},
+      "软考初级": {"aliases": ["软考初级", "程序员"], "level": "基础"},
+      "软考中级": {"aliases": ["软考中级", "软件设计师", "网络工程师"], "level": "中级"},
+      "软考高级": {"aliases": ["软考高级", "系统架构师", "系统分析师"], "level": "高级"},
+      "PMP": {"aliases": ["pmp", "项目管理师", "项目管理专业人士"], "level": "高级"},
+      "Oracle认证": {"aliases": ["oracle认证", "oca", "ocp"], "level": "高级"},
+      "AWS认证": {"aliases": ["aws认证", "aws certified"], "level": "高级"},
+      "华为认证": {"aliases": ["华为认证", "hcna", "hcnp", "hcie"], "level": "高级"},
+      "思科认证": {"aliases": ["思科认证", "ccna", "ccnp", "ccie"], "level": "高级"}
+    },
+    "专业": {
+      "CPA": {"aliases": ["cpa", "注册会计师"], "level": "高级"},
+      "CFA": {"aliases": ["cfa", "特许金融分析师"], "level": "高级"},
+      "ACCA": {"aliases": ["acca", "特许公认会计师"], "level": "高级"},
+      "FRM": {"aliases": ["frm", "金融风险管理师"], "level": "高级"},
+      "司法考试": {"aliases": ["司法考试", "法律职业资格"], "level": "高级"},
+      "教师资格证": {"aliases": ["教师资格证", "教资"], "level": "中级"}
+    }
+  },
+  "创新能力评估关键词": {
+    "优秀": ["专利", "论文", "创新项目", "技术攻关", "研发突破", "核心技术", "技术发明", "科研"],
+    "良好": ["创新思维", "独立解决", "技术改进", "优化方案", "创新意识", "技术探索"],
+    "一般": ["常规开发", "标准流程", "既有技术", "成熟方案"]
+  },
+  "学习能力评估关键词": {
+    "优秀": ["快速学习", "跨领域", "新技术研究", "技术预研", "前沿技术", "学习能力极强"],
+    "良好": ["持续学习", "跟踪动态", "技术提升", "学习能力强", "主动学习"],
+    "一般": ["使用现有", "稳定技术", "基础学习"]
+  },
+  "抗压能力评估关键词": {
+    "优秀": ["紧急项目", "高强度", "关键时刻", "deadline", "高压环境", "紧急响应"],
+    "良好": ["加班", "项目截止", "工作压力", "多任务处理", "时间紧迫"],
+    "一般": ["正常节奏", "稳定环境", "常规工作"]
+  },
+  "沟通能力评估关键词": {
+    "优秀": ["团队领导", "客户对接", "跨部门", "协调沟通", "对外沟通", "商务谈判"],
+    "良好": ["团队协作", "项目汇报", "会议沟通", "内部沟通", "团队配合"],
+    "一般": ["独立工作", "个人任务", "较少沟通"]
+  },
+  "实习能力评估关键词": {
+    "优秀": ["实习优先", "实习生", "应届生", "校招", "培养计划"],
+    "良好": ["接受应届", "培养新人", "新人友好", "导师制"],
+    "一般": ["需要经验", "有工作经验", "社招"]
+  },
+  "技能标准化映射": {
+    "js": "JavaScript",
+    "ts": "TypeScript",
+    "vue": "Vue.js",
+    "react": "React",
+    "angular": "Angular",
+    "springboot": "Spring Boot",
+    "spring boot": "Spring Boot",
+    "mysql": "MySQL",
+    "redis": "Redis",
+    "mongodb": "MongoDB",
+    "docker": "Docker",
+    "k8s": "Kubernetes",
+    "kubernetes": "Kubernetes",
+    "python": "Python",
+    "java": "Java",
+    "golang": "Go",
+    "go": "Go",
+    "c++": "C++",
+    "cpp": "C++",
+    "linux": "Linux",
+    "git": "Git",
+    "nginx": "Nginx",
+    "elasticsearch": "Elasticsearch",
+    "es": "Elasticsearch",
+    "kafka": "Kafka",
+    "spark": "Spark",
+    "hadoop": "Hadoop",
+    "flink": "Flink",
+    "tensorflow": "TensorFlow",
+    "pytorch": "PyTorch",
+    "sklearn": "Scikit-learn",
+    "scikit-learn": "Scikit-learn",
+    "opencv": "OpenCV",
+    "nlp": "NLP",
+    "aws": "AWS",
+    "azure": "Azure",
+    "aliyun": "阿里云",
+    "jenkins": "Jenkins",
+    "ansible": "Ansible",
+    "terraform": "Terraform"
+  }
+}

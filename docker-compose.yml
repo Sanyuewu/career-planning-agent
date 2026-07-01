@@ -1,0 +1,65 @@
+# 企业级拓扑：backend + 独立检索服务 + Redis + Postgres。
+# 本地单进程基线仍可用 `python run.py`（SQLite，无需本编排）。
+services:
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: career
+      POSTGRES_PASSWORD: career
+      POSTGRES_DB: career
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U career"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # 独立检索服务：图谱常驻内存 + FAISS，可独立扩容（与 backend 同镜像不同 command）
+  retrieval:
+    build: .
+    command: sh -c "uvicorn retrieval_service.server:app --host 0.0.0.0 --port 8090"
+    environment:
+      APP_ENV: production
+    env_file: [.env]
+    ports: ["8090:8090"]
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request,json,sys; r=json.load(urllib.request.urlopen('http://localhost:8090/health')); sys.exit(0 if r.get('ready') else 1)\""]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 120s   # 模型 + FAISS 加载需要时间
+
+  backend:
+    build: .
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8082"
+    environment:
+      APP_ENV: production
+      DATABASE_URL: postgresql+asyncpg://career:career@postgres:5432/career
+      REDIS_URL: redis://redis:6379/0
+      RETRIEVAL_SERVICE_URL: http://retrieval:8090
+      RATE_LIMIT_PER_MIN: "120"
+    env_file: [.env]          # 提供 LLM_API_KEY 等密钥
+    ports: ["8082:8082"]
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      retrieval: {condition: service_started}
+    healthcheck:               # 用 /ready：DB+图谱就位才算健康（urlopen 对 503 抛错→判失败）
+      test: ["CMD-SHELL", "python -c \"import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8082/ready').status==200 else 1)\""]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 120s       # 图谱 + FAISS 首次加载较慢
+
+volumes:
+  pgdata:

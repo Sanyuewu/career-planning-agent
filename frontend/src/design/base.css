@@ -1,0 +1,40 @@
+/* 基础重置 + 排版。引入顺序：tokens.css → base.css（见 main.ts）。 */
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; }
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', Roboto, Arial, sans-serif;
+  font-size: var(--fz-3);
+  line-height: var(--lh);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, h4, p { margin: 0; }
+button { font-family: inherit; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* 滚动条（柔和） */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #d7d9e3; border-radius: 999px; border: 2px solid var(--c-bg); }
+::-webkit-scrollbar-thumb:hover { background: #c3c6d4; }
+
+/* 通用动效 */
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: fade-up .35s ease both; }
+
+/* 文本工具 */
+.u-muted { color: var(--c-text-2); }
+.u-faint { color: var(--c-text-3); }
+.u-up { color: var(--c-growth); }
+.u-down { color: var(--c-danger); }
+.u-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* 让 Arco 的主色与品牌一致（仅覆盖主色调，不重造组件） */
+:root {
+  --primary-6: 109, 94, 252;
+  --primary-5: 128, 115, 253;
+  --primary-7: 90, 75, 219;
+}

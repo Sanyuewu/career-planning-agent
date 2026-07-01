@@ -1,0 +1,47 @@
+@baseUrl = http://localhost:8082
+@token = paste-access-token-here
+@studentId = 00000000-0000-4000-8000-000000000001
+
+### 1. Login seeded demo user
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "demo_student",
+  "password": "Demo@123456"
+}
+
+### 2. Current user
+GET {{baseUrl}}/api/auth/me
+Authorization: Bearer {{token}}
+
+### 3. Get demo portrait
+GET {{baseUrl}}/api/portrait/{{studentId}}
+Authorization: Bearer {{token}}
+
+### 4. Update demo portrait
+PUT {{baseUrl}}/api/portrait/{{studentId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "skills": ["Python", "FastAPI", "SQL", "Vue3", "数据分析", "Git"],
+  "certs": ["CET-6"],
+  "career_intent": "后端开发工程师",
+  "interests": ["AI 应用开发", "后端工程", "数据分析"]
+}
+
+### 5. Compute match
+POST {{baseUrl}}/api/match/compute
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "student_id": "{{studentId}}",
+  "job_name": "后端开发工程师",
+  "weight_preset": "default"
+}
+
+### 6. Recommend jobs
+GET {{baseUrl}}/api/match/recommend/{{studentId}}?top_k=5
+Authorization: Bearer {{token}}
