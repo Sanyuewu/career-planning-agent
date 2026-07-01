@@ -103,6 +103,8 @@ fuchuang2.0/
 
 如果需要完整 GraphRAG 能力，则进入 Full Mode：需要参考官方开源仓库 [TencentCloudADP/youtu-graphrag](https://github.com/TencentCloudADP/youtu-graphrag) 准备 `youtu-graphrag/`，并在项目根目录放置 `models/all-MiniLM-L6-v2/`、授权招聘数据、职业领域 schema、图谱与 FAISS 缓存。
 
+本项目不会随仓库提交或推送 `youtu-graphrag/` vendor 代码；公开仓库只保留职业规划业务适配层、脱敏示例和可降级 demo，避免重复分发第三方开源代码、模型权重和本地数据资产。
+
 结合当前实现，`app/services/youtu_retriever_service.py` 会尝试从 `youtu-graphrag/` 导入官方检索组件：
 
 - `models.retriever.enhanced_kt_retriever.KTRetriever`
